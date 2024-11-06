@@ -11,7 +11,7 @@ pipeline{
                 sh 'mvn clean install'
             }
         }
-    stage('diploy'){
+    stage('deploy'){
             steps{
                 sh 'cd target ; sudo cp *.war /home/ec2-user/apache-tomcat-10.1.14/webapps'
             }
